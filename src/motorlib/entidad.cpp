@@ -224,18 +224,19 @@ unsigned char Entidad::getSubTipoChar() {
   return out;
 }
 
-string strAccion(int accion) {
+string strAccion(Action accion) {
   string out = "";
 
   switch (accion) {
-    case 0: out = "actFORWARD"; break;
-    case 1: out = "actTURN_L"; break;
-    case 2: out = "actTURN_R"; break;
-    case 3: out = "actSEMITURN_L"; break;
-    case 4: out = "actSEMITURN_R"; break;
-    case 5: out = "actWHEREIS"; break;
-    case 6: out = "actIDLE"; break;
-  }
+    case actFORWARD: out = "actFORWARD"; break;
+    case actTURN_L: out = "actTURN_L"; break;
+    case actTURN_R: out = "actTURN_R"; break;
+    case actSEMITURN_L: out = "actSEMITURN_L"; break;
+    case actSEMITURN_R: out = "actSEMITURN_R"; break;
+    case actWHEREIS: out = "actWHEREIS"; break;
+    case actIDLE: out = "actIDLE"; break;
+    case actOVERTURN_L: out = "actOVERTURN_L"; break;
+    case actOVERTURN_R: out = "actOVERTURN_R"; break;  }
 
   return out;
 }

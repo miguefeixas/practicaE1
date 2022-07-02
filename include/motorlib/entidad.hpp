@@ -56,7 +56,7 @@ private:
   bool hitbox = true;
   int desactivado = 0;
 
-  int last_action = 3;
+  Action last_action = actIDLE;
   int misiones = 0;
   bool done = false;
   double tiempo = 0;
@@ -155,7 +155,7 @@ public:
   void setCompletoLosObjetivos() { completoLosObjetivos = true; }
   bool SeHanConseguidoLosObjetivos() { return completoLosObjetivos; }
 
-  void getLastAction(int accion) { last_action = accion; }
+  void getLastAction(Action accion) { last_action = accion; }
   int putLastAction() { return last_action; }
 
   vector<vector<unsigned char>> getMapaResultado() { return comportamiento->getMapaResultado(); }

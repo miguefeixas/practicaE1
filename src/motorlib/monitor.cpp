@@ -282,6 +282,9 @@ void MonitorJuego::inicializar(int pos_fila, int pos_col, int bruj, int seed) {
     // Esto coloca al jugador en el mapa
     //cout << "bruj: " << bruj << endl;
 
+    if (nivel == 2)
+      nueva_entidad(new Entidad(jugador, jugador_,static_cast<Orientacion>(bruj), pos_fila, pos_col, new Jugador3D(""), new ComportamientoJugador(mAux), 3, objetivosActivos, 3000));
+    else
       nueva_entidad(new Entidad(jugador, jugador_,static_cast<Orientacion>(bruj), pos_fila, pos_col, new Jugador3D(""), new ComportamientoJugador(mAux), 1, objetivosActivos, 3000));
   }
   else {
